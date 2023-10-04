@@ -1,0 +1,289 @@
+
+@import url(../styles/autre-styles/default.css);
+@import url(../styles/autre-styles/navbar.css);
+@import url(../styles/autre-styles/footer.css);
+
+
+@font-face {
+    font-family: 'Titre H1';
+    src: url(../fonts/panthera.otf);
+}
+@font-face {
+    font-family: 'Titre H2';
+    src: url(../fonts/BEYNO.ttf);
+}
+@font-face {
+    font-family: 'Enigme';
+    src: url(../fonts/WakandaForever-Regular.ttf);
+}
+@font-face {
+    font-family: 'texte';
+    src: url(../fonts/Cantarell-Regular.ttf);
+}
+   
+    h1{
+        font-family: 'Titre H2';
+        font-size: 4em;
+        color: var(--pinky);
+    }
+    h2{
+        font-family: 'Titre H2';
+        font-size: 2.6em;
+        color: var(--pinky);
+    }
+    p{
+        font-family: 'texte';
+        font-size: 1.3em;
+    }
+    q{
+        font-family: 'texte';
+        font-size: 1em;
+        font-style: italic;
+    }       
+    h3{
+        font-family: 'texte';
+        font-size: 4em;   
+    }
+    .btn{
+        font-family: 'texte';
+        font-size: 1.1em;
+        font-weight: bold;
+    }
+    h4{
+        font-family: 'texte';
+        font-size: 1.8em;
+        letter-spacing: 4px;
+    }
+    span{
+        font-family: 'Enigme';
+    }
+
+
+html, body {
+    height: 100%;
+}
+  
+body {
+    margin: 0;
+    padding: 0;
+    background: #11213F url("../images/Allpages/arrière_plan.png") no-repeat;
+    background-size: cover;
+    font-size: 12px;
+    color: white;
+    overflow-x: hidden;
+}
+  
+
+
+
+/*premier section*/
+#okoye{
+    height: 100vh;
+    background: url(../images/Enigme/Pantherenigme1.png) 5% 10px/50vw no-repeat, url(../images/Enigme/Pantherenigme3.png) 100% 90%/100% no-repeat;
+    display: flex;
+    align-items: center;
+}
+.vide{
+    width: 60%;
+}
+.defi{
+    width: 40%;
+    text-align: justify;
+    .titre{
+        width: 100%;
+        max-width: 440px;
+    }
+    .charade{
+        width: 90%;
+        min-width: 280px;
+        font-size: .9em;
+        padding: 60px 40PX;
+        background: url(../images/Enigme/Pantherenigme2.png) center/100% no-repeat;
+    }
+}
+
+/*deuxième section(enigme)*/
+#enigme{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10px 0 13%;
+}
+.left{
+    width: 35%;
+    margin-right: 5%;
+}
+.right{
+    width: 50%;
+    margin-left: 5%;
+}
+button{
+    font-family: 'texte';
+    width: 155px;
+    padding: 10px 0;
+    border-radius: 38px;
+    margin: 7px 0;
+    background-color: var(--button);
+    border: none;
+    cursor: pointer;
+    transition: .25s all ease-out;
+    &:hover{
+        filter: drop-shadow(0 0 7px #F2CEF2);
+        color: var(--general);
+    }
+}
+.description{
+    text-align: justify;
+    h2{
+        text-decoration: underline;
+    }
+}
+.whut{
+    font-size: 1.2em;
+}
+.important{
+    font-family: 'texte';
+    font-size: .9em;
+}
+.enigme{
+    input{
+        background: transparent;
+        padding: 10px;
+        margin: 5px 0;
+        border: 2px solid var(--button);
+        border-radius: 25px;
+        max-width: 400px;
+        width: 100%;
+        color: #F2CEF2;
+        &::placeholder{
+            color: var(--button);
+        }
+        &:focus{
+            outline: none;
+        }
+    }
+}
+.question{
+    margin: 25px 0;
+}
+.wut{
+    font-size: 1.5em;
+    word-spacing: 10px;
+    color: var(--pinky);
+}
+
+.hint{
+    text-align: center;
+    padding: 120px 5px;
+    background: url(../images/Enigme/Pantherenigme2.png) right center/100% no-repeat;
+}
+
+.popup {
+    z-index: 2;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    text-align: center;
+}
+#congratsPopup{
+    height: 100vh;
+    width: 100vw;
+    background-color: #11213f5e;
+    backdrop-filter: blur(5px);
+}
+#secondPopup{
+    min-width: 250px;
+    width: 30%;
+    height: max-content;
+    padding: 25px;
+    background: linear-gradient(to bottom, var(--button), var(--general));
+    span{
+        font-family: 'texte';
+        font-weight: bold;
+        letter-spacing: 2px;
+    }
+    .figma{
+        display: flex;
+        justify-content: center;
+        text-align: left;
+        .txt{
+            margin-left: 5px;
+        }
+    }
+}
+//Footer
+footer {
+    height: max-content;
+    padding: 40px 0;
+    background: url(../images/Allpages/back_footer.png) center/cover no-repeat;
+}
+
+/*Partie résponsive*/
+@media screen and (max-width: 900px) {
+    #okoye{
+        height: 105vh;
+        background: url(../images/Enigme/Pantherenigme1.png) top center/95vw no-repeat, url(../images/Enigme/Pantherenigme3.png) bottom left/100% no-repeat;
+        display: flex;
+        align-items: center;
+    }
+    .defi{
+        padding-top: 350px;
+        width: 100%;
+        .titre{
+            text-align: center;
+            margin: 0 auto 3%;
+            width: 70%;
+            font-size: .9em;
+            background: linear-gradient(to right, transparent, #600e6e70, transparent);
+        }
+        .charade{
+            text-align: center;
+            margin: 0 auto 0;
+            width: 70%;
+            min-width: 280px;
+            font-size: .9em;
+            padding: 30px 40PX;
+            background: url(../images/Enigme/Pantherenigme2.png) center/100% no-repeat;
+            text-shadow: 0 0 1px 4px #080d17cf;
+        }
+    }
+    .vide{
+        display: none;
+    }
+   
+}
+@media screen and (max-width: 720px) {
+    #okoye{
+        height: 110vh;
+    }
+}
+@media screen and (max-width: 620px) {
+    .defi{
+        .charade{
+            width: 100%;
+            background: none;
+            font-size: 1em;
+            text-align: justify;
+        }
+    }
+}
+@media screen and (max-width: 520px) {
+    #okoye{
+        height: 135vh;
+    }
+}
+@media screen and (max-width: 900px) {
+    #enigme{
+        height: 135vh;
+        margin-top: 20%;
+        display: block;
+    }
+    .left, .right{
+        margin: 0;
+        width: 90%;
+        min-width: 250px;
+    }
+}

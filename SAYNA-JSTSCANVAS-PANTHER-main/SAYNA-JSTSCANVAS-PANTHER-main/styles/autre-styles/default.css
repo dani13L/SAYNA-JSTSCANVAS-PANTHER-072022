@@ -1,0 +1,110 @@
+
+:root {
+  --general: #021740;
+  --pinky: #9E91B7;
+  --button: #F2CEF2;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  font-weight: normal;
+  font-style: normal;
+  list-style: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 450px) {
+  .biographie h1 {
+    font-size: 4em;
+  }
+}
+
+/* "View More" effect */
+.more {
+  position: relative;
+}
+
+.more span {
+  margin-left: 0;
+  transition: all 0.35s ease-in-out;
+}
+
+.more:hover span {
+  margin-left: 10px;
+}
+
+.more::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 75px;
+  background-color: #fff;
+  bottom: 0;
+  left: 0;
+  transition: all 0.35s ease-in-out;
+}
+
+.more:hover::after {
+  width: 85px;
+}
+
+/* Animation scroll*/
+.scroll {
+  transform: translateX(-50%);
+  filter: blur(5px);
+  transition: 0.7s all;
+}
+
+.appear {
+  transform: translateX(0);
+  filter: blur(0);
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion) {
+  .scroll {
+    transition: none;
+  }
+}
+
+h1,
+h2,
+.portrait img {
+  transition: 0.25s all ease-in-out;
+  cursor: pointer;
+}
+
+.portrait img:hover {
+  transform: scale(1.01);
+}
+
+body {
+  height: 100vh;
+}
+
+.cursor {
+  position: absolute;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+}
+
+.expand {
+  animation: cursorClick 0.5s forwards;
+}
+
+@keyframes cursorClick {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(3);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+    filter: blur(5px);
+  }
+}

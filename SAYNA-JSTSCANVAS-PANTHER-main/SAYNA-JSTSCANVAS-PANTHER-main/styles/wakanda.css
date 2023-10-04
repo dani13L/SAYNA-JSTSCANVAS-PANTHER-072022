@@ -1,0 +1,169 @@
+@charset "UTF-8";
+
+@import url(../styles/autre-styles/default.css);
+@import url(../styles/autre-styles/navbar.css);
+@import url(../styles/autre-styles/footer.css);
+
+@font-face {
+  font-family: "Titre H1";
+  src: url(../fonts/panthera.otf);
+}
+@font-face {
+  font-family: "Titre H2";
+  src: url(../fonts/BEYNO.ttf);
+}
+@font-face {
+  font-family: "Enigme";
+  src: url(../fonts/WakandaForever-Regular.ttf);
+}
+@font-face {
+  font-family: "texte";
+  src: url(../fonts/Cantarell-Regular.ttf);
+}
+h1 {
+  font-family: "Titre H2";
+  font-size: 4em;
+  color: var(--pinky);
+}
+
+h2 {
+  font-family: "Titre H2";
+  font-size: 2.6em;
+  color: var(--pinky);
+}
+
+p {
+  font-family: "texte";
+  font-size: 1.3em;
+}
+
+q {
+  font-family: "texte";
+  font-size: 1em;
+  font-style: italic;
+}
+
+h3 {
+  font-family: "texte";
+  font-size: 4em;
+}
+
+.btn {
+  font-family: "texte";
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+h4 {
+  font-family: "texte";
+  font-size: 1.8em;
+  letter-spacing: 4px;
+}
+
+span {
+  font-family: "Enigme";
+  font-size: 0.9em;
+  word-spacing: 10px;
+  padding-left: 10px;
+}
+
+body {
+  background: #11213F url("../images/Allpages/arrière_plan.png") no-repeat;
+  background-size: cover;
+  font-size: 12px;
+  color: white;
+  overflow-x: hidden;
+}
+
+
+
+/*Premier section*/
+#city {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url(../images/Wakanda/Pantherwakanda1.png) 70% 30%/cover no-repeat;
+}
+
+.ever {
+  margin: 10%;
+}
+.ever .ever-text {
+  width: 300px;
+  text-align: justify;
+  font-size: 0.9em;
+  margin-top: 25px;
+}
+
+
+@media screen and (max-width: 640px) {
+  #city {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+  .ever {
+    display: grid;
+    text-align: center;
+  }
+  .ever .ever-text {
+    width: 90%;
+    text-align: justify;
+    font-size: 1em;
+    margin: 25px auto 10px;
+    background: linear-gradient(to right, transparent, rgba(98, 7, 106, 0.4666666667), transparent);
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 900px) {
+  .ever-title {
+    background: linear-gradient(to right, transparent, rgba(220, 22, 22, 0.3254901961), transparent);
+  }
+  .ever-text {
+    background: linear-gradient(to right, rgba(98, 7, 106, 0.4666666667), transparent);
+    padding-left: 5px;
+  }
+}
+/*deuxième section*/
+#origins {
+  display: flex;
+  margin: 10% 30px;
+  text-align: justify;
+  background: url(../images/Wakanda/Pantherwakanda2.png) top center/100% no-repeat;
+}
+
+.leftpart {
+  margin-right: 20px;
+  width: 50%;
+}
+
+.rightpart {
+  margin-left: 20px;
+  width: 50%;
+}
+.rightpart .chars img {
+  width: 100%;
+}
+footer {
+  height: max-content;
+  padding: 40px 0;
+  background: url(../images/Allpages/back_footer.png) center/cover no-repeat;
+}
+
+/*Partie résponsive*/
+@media screen and (max-width: 900px) {
+  #origins {
+    display: block;
+    margin: 10% 10% 10% 13%;
+  }
+  .leftpart {
+    margin-right: 0;
+    width: 100%;
+  }
+  .rightpart {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=wakanda.css.map */
